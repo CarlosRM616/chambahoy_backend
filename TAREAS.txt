@@ -1,0 +1,15 @@
+Se realizó un cambio en los modelos, solo indicando explícitamente el tipo de datos
+que contendrá la columna, esto es sqlalchemy 2.0
+
+Crear una forma de actualizar el estado (activa, vencida, etc) de la vacante
+Agregar un control de vencimiento (automático) a la fecha de cierre, ya se acordó
+crear un control automático que primero filtre las vacantes que estan a punto de vencer(para
+no gastar tiempo cambiando todos ) y despues cambie el estado
+↓
+Basarse en la fecha vencimiento para la comparacion y no en estado_vacantes ya que
+es más correcto el dato de fecha_vencimiento (Según chatGPT)
+
+Extender fecha cierre cuando una vacante se reactive
+
+Se puede editar en cualquier momento una vacante pero solo reactivarse de forma
+manual, creo que también debería poder cerrar una vacante manualmente
