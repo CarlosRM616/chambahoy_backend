@@ -33,7 +33,8 @@ def crear_usuario(
         telefono=usuario.telefono,
         ubicacion=usuario.ubicacion,
         disponibilidad=usuario.disponibilidad,
-        contrasena_hash=usuario.contrasena
+        foto_perfil=usuario.foto_perfil,
+        contrasena_hash=usuario.contrasena_hash
     )
     db.add(nuevo_usuario)
     db.commit()

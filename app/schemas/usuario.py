@@ -17,14 +17,14 @@ class UsuarioBase(BaseModel):
 
 
 class UsuarioCreate(UsuarioBase):
-    contrasena: str
+    contrasena_hash: str
 
 
 class UsuarioResponse(UsuarioBase):
     id_usuario: UUID
     tipo_usuario: str
-    estado_cuenta: str
     fecha_registro: datetime
+    estado_cuenta: str
 
     class Config:
         from_attributes = True

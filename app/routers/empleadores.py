@@ -32,6 +32,7 @@ def crear_empleador(
         telefono=empleador.telefono,
         ubicacion=empleador.ubicacion,
         tipo_empleador=empleador.tipo_empleador,
+        foto_logotipo=empleador.foto_logotipo,
         contrasena_hash=empleador.contrasena
     )
     db.add(nuevo_empleador)

@@ -26,8 +26,8 @@ class RegistroInteres(Base):
     )
     fecha_respuesta = Column(DateTime(timezone=True))
 
-    usuario = relationship("Usuario", back_populates="intereses")
-    vacante = relationship("Vacante", back_populates="intereses")
+    #usuario = relationship("Usuario", back_populates="intereses")
+    #vacante = relationship("Vacante", back_populates="intereses")
 
     __table_args__ = (
         Index(
