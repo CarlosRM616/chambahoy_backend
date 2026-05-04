@@ -52,14 +52,7 @@ def validar_interes_unico(db: Session, id_usuario, id_vacante):
 
 
 def determinar_estado(vacante: Vacante, db: Session):
-    empleador = db.query(Empleador).filter(
-        Empleador.id_empleador == vacante.id_empleador
-    ).first()
-
-    if empleador is None:
-        raise HTTPException(status_code=404, detail="Empleador no encontrado")
-    
-    if empleador.aceptacion_automatica:
+    if vacante.aceptacion_automatica:
         return "aceptado", datetime.now(timezone.utc)
 
     return "pendiente", None

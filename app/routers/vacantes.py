@@ -1,12 +1,11 @@
 # routers/vacantes.py
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from app.db.database import SessionLocal
 from app.models.vacante import Vacante
 from app.schemas.vacante import VacanteCreate, VacanteResponse
-
 
 router = APIRouter(
     prefix="/vacantes",
@@ -45,7 +44,7 @@ def crear_vacante(vacante: VacanteCreate, db: Session = Depends(get_db)):
         sexo_requerido=vacante.sexo_requerido,
         habilidades_requeridas=vacante.habilidades_requeridas,
 
-        fecha_cierre=datetime.utcnow() + timedelta(days=7),
+        fecha_cierre=datetime.now(timezone.utc) + timedelta(days=7),
         aceptacion_automatica=vacante.aceptacion_automatica
     )
 
