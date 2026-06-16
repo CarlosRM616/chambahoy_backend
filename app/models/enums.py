@@ -5,4 +5,3 @@ class EstadoInteres(str, Enum):
     aceptado = "aceptado"
     rechazado = "rechazado"
     expirado = "expirado"
-    bloqueado = "bloqueado"
