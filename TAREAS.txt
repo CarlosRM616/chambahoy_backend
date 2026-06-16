@@ -1,5 +1,41 @@
 4e2c91fe-37ec-46bd-9608-6c1e167cdb26
 44231ac6-7283-4178-bcd3-9d3e015b9578
 
-979dc3fb-f8b9-4214-8031-31cfd2e9e9c4
-44231ac6-7283-4178-bcd3-9d3e015b9578
+Crear una forma de actualizar el estado (activa, vencida, etc) de la vacante
+Agregar un control de vencimiento (automático) a la fecha de cierre, ya se acordó
+crear un control automático que primero filtre las vacantes que estan a punto de vencer(para
+no gastar tiempo cambiando todos ) y despues cambie el estado
+↓
+Basarse en la fecha vencimiento para la comparacion y no en estado_vacantes ya que
+es más correcto el dato de fecha_vencimiento (Según chatGPT)
+
+Extender fecha cierre cuando una vacante se reactive
+
+Se puede editar en cualquier momento una vacante pero solo reactivarse de forma
+manual, creo que también debería poder cerrar una vacante manualmente
+
+{
+  "id_usuario": "4e2c91fe-37ec-46bd-9608-6c1e167cdb26",
+  "id_vacante": "44231ac6-7283-4178-bcd3-9d3e015b9578"
+}
+
+{
+  "titulo": "Garrotero",
+  "descripcion": "Se solicita una persona activa y con gusto en atencion al cliente para dar apoyo a los meseros.",
+  "ubicacion": "colonia vicente, zihuatanejo",
+  "sueldo": 9500,
+  "tipo_contrato": "diario",
+  "horario": "10:00-19:00",
+  "lunes": true,
+  "martes": true,
+  "miercoles": false,
+  "jueves": true,
+  "viernes": true,
+  "sabado": true,
+  "domingo": true,
+  "edad_requerida": "18-30",
+  "sexo_requerido": "indistinto",
+  "habilidades_requeridas": "activo, atencion al cliente, presentable",
+  "aceptacion_automatica": true,
+  "id_empleador": "cf2c376b-1332-44fc-a8f2-9f7cd5458689"
+}
